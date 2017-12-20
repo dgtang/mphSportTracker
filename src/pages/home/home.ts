@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,Platform } from 'ionic-angular';
+import { BLE } from '@ionic-native/ble';
+import { LightBlueService } from 'ionic-lightblue';
 
 @Component({
   selector: 'page-home',
@@ -7,7 +9,9 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform,
+              private lightblue: LightBlueService) {
+
 
   }
 
