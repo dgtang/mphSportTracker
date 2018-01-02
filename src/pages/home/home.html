@@ -7,10 +7,24 @@
 </ion-header>
 
 <ion-content padding>
-  Scanner
-  <ion-item *ngIf = "let service of services">
-    {{service.set}}
-  </ion-item>
-  <button (click)='scan();'>Start Scan</button>
-  <button (click)='stopScan();'>Stop Scan</button>
+  <ion-buttons end>
+        <button ion-button (click)="scan()">
+          Scan
+        </button>
+  </ion-buttons>
+
+  BLE device list here 
+   <ion-list>
+    <button ion-item *ngFor="let device of devices">
+      <h2>{{ device.name || 'Unnamed' }}</h2>
+      <p>{{ device.id }}</p>
+      <p>RSSI: {{ device.rssi }}</p>
+    </button>
+   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>
