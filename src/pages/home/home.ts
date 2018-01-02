@@ -12,8 +12,8 @@ export class HomePage {
    LIGHTBLUE_NAME = 'BeanName';
    OPTIONAL_END_SERIAL_RESPONSE_CHAR = "\n";
 
-  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform
-  /*private lightblue: LightBlueService*/) {
+  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform) {
+    /*private lightblue: LightBlueService*/
               /*  platform.ready().then(() => {
       console.log('platform ready');
 
@@ -47,14 +47,14 @@ export class HomePage {
   }*/
 
   }
-  scan(services, seconds){
-    services = [];
+  scan(set, seconds){
+    set = [];
     seconds = 100;
-
+    console.log("hi");
   }
 
   stopScan(){
-
+    console.log("hello");
   }
 
 }
