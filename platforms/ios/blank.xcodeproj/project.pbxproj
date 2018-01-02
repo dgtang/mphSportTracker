@@ -480,7 +480,7 @@
 				INFOPLIST_FILE = "blank/blank-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danagtang.ble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dana.ble;
 				PRODUCT_NAME = blank;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +504,7 @@
 				INFOPLIST_FILE = "blank/blank-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danagtang.ble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dana.ble;
 				PRODUCT_NAME = blank;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

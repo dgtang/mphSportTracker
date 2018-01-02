@@ -1,5 +1,5 @@
 import { Component, NgZone } from '@angular/core';
-import { NavController,Platform } from 'ionic-angular';
+import { NavController,Platform, NavParams} from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
 import { ToastController } from 'ionic-angular';
 
@@ -9,12 +9,19 @@ import { ToastController } from 'ionic-angular';
 })
 
 export class DetailsPage {
-   devices: any[] = [];
-   statusMessage: string;
+  //deviceDetails: string;
+   //devices: any[] = [];
+   //statusMessage: string;
 
-  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform, private toastCtrl: ToastController, private ngZone: NgZone) {
+  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform, private toastCtrl: ToastController, private ngZone: NgZone, public navParams: NavParams) {
   //https://github.com/don/ionic-ble-examples/blob/master/scan/src/pages/home/home.ts
 
+//logging right thing so something is wrong with theis
+  // let deviceDetails = this.navParams.get('device');
+  // console.log(deviceDetails);
+  // console.log("devicedetails");
+  // I think if I tried passing other data it would work but this just downst becuase it's not permanent, its just laoding. 
+  console.log(this.navParams.get('device'));
   }
   /*ionViewDidEnter() {
     console.log('ionViewDidEnter');

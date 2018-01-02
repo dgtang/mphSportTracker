@@ -1,5 +1,5 @@
 import { Component, NgZone } from '@angular/core';
-import { NavController,Platform } from 'ionic-angular';
+import { NavController,Platform, NavParams } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
 import { ToastController } from 'ionic-angular';
 import { DetailsPage } from '../details/details';
@@ -13,7 +13,7 @@ export class HomePage {
    devices: any[] = [];
    statusMessage: string;
 
-  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform, private toastCtrl: ToastController, private ngZone: NgZone) {
+  constructor(public navCtrl: NavController, private ble: BLE,public platform: Platform, private toastCtrl: ToastController, private ngZone: NgZone, public navParams: NavParams) {
   //https://github.com/don/ionic-ble-examples/blob/master/scan/src/pages/home/home.ts
 
   }
@@ -60,8 +60,11 @@ export class HomePage {
     });
   }
 
+//make it pass each individual one like devie.id, device.rssi etc??
   choose(device){
-    this.navCtrl.push(DetailsPage);
+    console.log(device);
+    console.log("device");
+    this.navCtrl.push(DetailsPage,device);
   }
 
 
