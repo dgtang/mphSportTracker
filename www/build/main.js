@@ -106,14 +106,26 @@ var HomePage = (function () {
         });
     };
     //make it pass each individual one like devie.id, device.rssi etc??
+    //https://www.youtube.com/watch?v=T5iGAAypGBA&t=418s
     HomePage.prototype.choose = function (device) {
-        console.log(device);
+        // let data = {
+        //   title: 'yummy pancakes',
+        //   ingredients: [
+        //     'flour',
+        //     'pancake stuff'
+        //   ],
+        //   time: '10 minutes'
+        // };
+        // this.navCtrl.push(DetailsPage,data);
         console.log("device");
+        console.log(device.id);
+        console.log(device);
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__details_details__["a" /* DetailsPage */], device);
+        //this.navCtrl.push(DetailsPage,device.id);
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/danatang/mphSportTracker/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-buttons end>\n        <button ion-button (click)="scan()">\n          Scan\n        </button>\n  </ion-buttons>\n\n  BLE device list here\n   <ion-list>\n    <button ion-item *ngFor="let device of devices" (click)="choose(device.id)">\n      <h2>{{ device.name || \'Unnamed\' }}</h2>\n      <p>{{ device.id }}</p>\n      <p>RSSI: {{ device.rssi }}</p>\n    </button>\n   </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <p>{{ statusMessage }}</p>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/danatang/mphSportTracker/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/danatang/mphSportTracker/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-buttons end>\n        <button ion-button (click)="scan()">\n          Scan\n        </button>\n  </ion-buttons>\n\n  BLE device list here\n   <ion-list>\n    <button ion-item *ngFor="let device of devices" (click)="choose(device)">\n      <h2>{{ device.name || \'Unnamed\' }}</h2>\n      <p>{{ device.id }}</p>\n      <p>RSSI: {{ device.rssi }}</p>\n    </button>\n   </ion-list>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <p>{{ statusMessage }}</p>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/danatang/mphSportTracker/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_ble__["a" /* BLE */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], HomePage);
@@ -146,9 +158,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var DetailsPage = (function () {
-    //deviceDetails: string;
-    //devices: any[] = [];
-    //statusMessage: string;
     function DetailsPage(navCtrl, ble, platform, toastCtrl, ngZone, navParams) {
         //https://github.com/don/ionic-ble-examples/blob/master/scan/src/pages/home/home.ts
         this.navCtrl = navCtrl;
@@ -161,11 +170,19 @@ var DetailsPage = (function () {
         // let deviceDetails = this.navParams.get('device');
         // console.log(deviceDetails);
         // console.log("devicedetails");
-        console.log(this.navParams.get('device.name'));
+        // I think if I tried passing other data it would work but this just downst becuase it's not permanent, its just laoding.
+        // console.log(this.navParams.get('title'));
+        // this.dana = this.navParams.get('title');
+        console.log('devicedetails');
+        console.log(this.navParams.get('device'));
+        console.log(this.navParams.get('device.id'));
+        console.log(this.navParams.get('id'));
+        // this.deviceDetails = this.navParams.get('device.id');
+        this.deviceDetails = this.navParams.get('id');
     }
     DetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'details-page',template:/*ion-inline-start:"/Users/danatang/mphSportTracker/src/pages/details/details.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  details\n  id:<p>{{ deviceDetails }}</p>\n</ion-content>\n\n<ion-footer>\n\n</ion-footer>\n'/*ion-inline-end:"/Users/danatang/mphSportTracker/src/pages/details/details.html"*/
+            selector: 'details-page',template:/*ion-inline-start:"/Users/danatang/mphSportTracker/src/pages/details/details.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Blank\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  details this\n  <!-- id:<p>{{ deviceDetails }}</p> -->\n  <p>{{ dana }}</p>\n  <p>{{ deviceDetails }}</p>\n\n</ion-content>\n\n<ion-footer>\n\n</ion-footer>\n'/*ion-inline-end:"/Users/danatang/mphSportTracker/src/pages/details/details.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_ble__["a" /* BLE */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
     ], DetailsPage);

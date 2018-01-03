@@ -61,10 +61,23 @@ export class HomePage {
   }
 
 //make it pass each individual one like devie.id, device.rssi etc??
+//https://www.youtube.com/watch?v=T5iGAAypGBA&t=418s
   choose(device){
-    console.log(device);
+
+  // let data = {
+  //   title: 'yummy pancakes',
+  //   ingredients: [
+  //     'flour',
+  //     'pancake stuff'
+  //   ],
+  //   time: '10 minutes'
+  // };
+  // this.navCtrl.push(DetailsPage,data);
     console.log("device");
+    console.log(device.id);
+    console.log(device);
     this.navCtrl.push(DetailsPage,device);
+    //this.navCtrl.push(DetailsPage,device.id);
   }
 
 

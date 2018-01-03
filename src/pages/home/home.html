@@ -15,7 +15,7 @@
 
   BLE device list here
    <ion-list>
-    <button ion-item *ngFor="let device of devices" (click)="choose(device.id)">
+    <button ion-item *ngFor="let device of devices" (click)="choose(device)">
       <h2>{{ device.name || 'Unnamed' }}</h2>
       <p>{{ device.id }}</p>
       <p>RSSI: {{ device.rssi }}</p>
