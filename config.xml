@@ -85,4 +85,5 @@
         <variable name="BLUETOOTH_USAGE_DESCRIPTION" value="Your description here" />
     </plugin>
     <engine name="ios" spec="~4.5.4" />
+    <plugin name="cordova-plugin-device-motion" spec="^1.2.5" />
 </widget>

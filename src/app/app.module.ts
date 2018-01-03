@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 //import { LightBlueModule } from 'ionic-lightblue';
 import { BLE } from '@ionic-native/ble';
+import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -31,7 +32,9 @@ import { DetailsPage } from '../pages/details/details';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BLE
+    BLE,
+    DeviceMotion,
+    DeviceMotionAccelerationData
   ]
 })
 export class AppModule {}

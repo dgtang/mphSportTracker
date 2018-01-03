@@ -3,6 +3,7 @@ import { NavController,Platform, NavParams } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
 import { ToastController } from 'ionic-angular';
 import { DetailsPage } from '../details/details';
+import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device-motion';
 
 @Component({
   selector: 'page-home',

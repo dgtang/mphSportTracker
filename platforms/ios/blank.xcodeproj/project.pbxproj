@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0065A44603AB4F99BF0F4C65 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D08CC653FF401A87AB5DA9 /* GCDWebServer.m */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
@@ -40,6 +39,8 @@
 		DD48AB0C5585481E9E228816 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D397E9557264EA4B9FE71BD /* libz.tbd */; };
 		E5E9817A4D2044799C23E0E9 /* BLECentralPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD5303E52C24F8EB13EBC54 /* BLECentralPlugin.m */; };
 		E907D680F6D54C29A32F65ED /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D11A463F75643F29C65EDE2 /* IonicKeyboard.m */; };
+		9DD475318F584DA394C82658 /* CDVAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = D37024FDC09E4E5E91E9A6DB /* CDVAccelerometer.m */; };
+		156459030AF04478883B029F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D5029073114707A140DAE7 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,9 @@
 		F03D036983BF46BBBDED1271 /* BLECommandContext.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = BLECommandContext.h; path = "cordova-plugin-ble-central/BLECentralPlugin/BLECommandContext.h"; sourceTree = "<group>"; };
 		F1A46D685CED42A9997869E0 /* GCDWebServerConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = GCDWebServerConnection.m; path = "cordova-plugin-ionic-webview/GCDWebServerConnection.m"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = blank/config.xml; sourceTree = "<group>"; };
+		D37024FDC09E4E5E91E9A6DB /* CDVAccelerometer.m */ = {isa = PBXFileReference; name = "CDVAccelerometer.m"; path = "cordova-plugin-device-motion/CDVAccelerometer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A3F14E3AC2D6414289249E0D /* CDVAccelerometer.h */ = {isa = PBXFileReference; name = "CDVAccelerometer.h"; path = "cordova-plugin-device-motion/CDVAccelerometer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F5D5029073114707A140DAE7 /* CoreMotion.framework */ = {isa = PBXFileReference; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 				5D84F1218C34484EBA9C84A4 /* CoreBluetooth.framework in Frameworks */,
 				0ED6C263531B437C9543790F /* WebKit.framework in Frameworks */,
 				DD48AB0C5585481E9E228816 /* libz.tbd in Frameworks */,
+				156459030AF04478883B029F /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +227,7 @@
 				7CC659EEC57745B1B3FA196C /* CoreBluetooth.framework */,
 				98032398FE5C42249FAF9806 /* WebKit.framework */,
 				5D397E9557264EA4B9FE71BD /* libz.tbd */,
+				F5D5029073114707A140DAE7 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -296,6 +302,8 @@
 				51AD4F39E4964C8591086999 /* GCDWebServerErrorResponse.h */,
 				EA64A75B311C488B8C0BB5CE /* GCDWebServerFileResponse.h */,
 				8D76391998904C9BBD580894 /* GCDWebServerStreamedResponse.h */,
+				D37024FDC09E4E5E91E9A6DB /* CDVAccelerometer.m */,
+				A3F14E3AC2D6414289249E0D /* CDVAccelerometer.h */,
 			);
 			name = Plugins;
 			path = blank/Plugins;
@@ -446,6 +454,7 @@
 				85346E61C5984BDA90115F68 /* GCDWebServerErrorResponse.m in Sources */,
 				AAFA2BA19D124D84BDE07540 /* GCDWebServerFileResponse.m in Sources */,
 				3083854450244E8A88804FC9 /* GCDWebServerStreamedResponse.m in Sources */,
+				9DD475318F584DA394C82658 /* CDVAccelerometer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
